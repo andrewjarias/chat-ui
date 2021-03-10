@@ -10,10 +10,6 @@ export class MessageInput extends React.Component<any, any> {
 
     submitMessage = (e: any) => {
         e.preventDefault();
-        if (!this.props.username) {
-            window.alert("Please enter a Username.");
-            return;
-        }
         this.props.addMessage({
             author: this.props.userName,
             message: this.state.msgVal,
